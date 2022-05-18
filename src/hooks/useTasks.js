@@ -5,7 +5,9 @@ const useTasks = () => {
 useEffect( () => {
     fetch('http://localhost:5000/tasks')
     .then(res => res.json())
-    .then(data => setTasks(data));
+    .then(data => {
+        setTasks(data);
+    });
 },[]);
 
 return [tasks, setTasks]
