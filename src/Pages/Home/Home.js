@@ -1,9 +1,9 @@
-import React from 'react';
+import Task from '../Task/Task';
 
 const Home = () => {
     return (
-        <div>
-            <h2>HOME</h2>
+        <div >
+        <Task></Task>
         </div>
     );
 };
