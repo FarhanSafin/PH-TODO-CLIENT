@@ -15,22 +15,30 @@ const Header = () => {
     const path = `/`;
     navigate(path);
 }
+
+const handleAddTask = () => {
+  const path = `/addtask`;
+  navigate(path);
+}
   
     return (
-      <>
+      <div className='text-center mt-8 mb-20'>
                             {
                                 user ?
-                                    <button onClick={handleSignOut} className='btn btn-link text-danger text-decoration-none'>Log Out</button>
+                                    <div>
+                                      <button onClick={handleAddTask} className='btn btn-accent mr-5'>Add Task</button>
+                                      <button onClick={handleSignOut} className='btn btn-secondary'>Log Out</button>
+                                    </div>
                                 :
                                 <div>
-                                <CustomLink as={Link} to="login">
+                                <CustomLink className="text-3xl" as={Link} to="login">
                                 Login
                             </CustomLink>
-                              <CustomLink className="ms-3" as={Link} to="registration">
+                              <CustomLink className="text-3xl" as={Link} to="registration">
                                 Registration
                             </CustomLink></div>
                             }
-</>
+</div>
     );
 };
 

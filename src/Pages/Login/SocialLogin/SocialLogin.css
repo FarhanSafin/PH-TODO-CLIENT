@@ -1,0 +1,25 @@
+.login-with-google-btn {
+    border-radius: 10px;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba(131, 125, 125, 0.267);
+}
+
+.margin{
+    margin-top: 15px;
+}
+
+.button-width{
+    width: 25%;
+}
+
+@media only screen and (max-width: 688px) {
+    .margin{
+        margin-top: 6px;
+    }
+
+    .button-width{
+        width: 100%;
+    }
+}

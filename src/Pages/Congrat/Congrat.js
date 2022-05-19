@@ -8,9 +8,9 @@ const Congrat = () => {
         navigate(path);
     }
     return (
-        <div>
-            <h2>Successfully completed the task</h2>
-            <button onClick={() => handleHome()}>Return Home</button>
+        <div className='text-center'>
+            <h2 className='text-5xl mb-20'>Successfully completed the task</h2>
+            <button className='btn btn-primary' onClick={() => handleHome()}>Complete Other Task</button>
         </div>
     );
 };

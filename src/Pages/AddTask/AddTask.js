@@ -6,7 +6,7 @@ const AddTask = () => {
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
-        const url = `http://localhost:5000/addtask`;
+        const url = `https://serene-earth-69289.herokuapp.com/addtask`;
         fetch(url, { 
             method: 'POST',
             headers:{
@@ -26,12 +26,12 @@ const AddTask = () => {
 
     return (
         <div className='container mx-auto text-center text-secondary'>
-            <h2 className='text-center mt-5'>Add Task</h2>
+            <h2 className='text-center mt-5 text-5xl mb-10'>Add Task</h2>
             <form className='d-flex flex-column mt-4' onSubmit={handleSubmit(onSubmit)}>
-                <label className=''><h5>Task's Name</h5></label>
-                <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                <label className=''><h5>Task's Description</h5></label>
-                <textarea className='mb-2' placeholder='Description' {...register("description", { required: true, maxLength: 20 } )} />
+                <label className='text-4xl'><h5>Task's Name</h5></label>
+                <input required className='mb-2' placeholder='Name' {...register("name")} />
+                <label className='text-4xl mt-5'><h5>Task's Description</h5></label>
+                <textarea required className='mb-2 mt-5' placeholder='Description' {...register("description")} />
                 <br />
                 <input className='btn btn-success mt-4' type='submit' value="Add Task" />
             </form>
